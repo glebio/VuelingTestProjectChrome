@@ -1,7 +1,6 @@
 package com.epam.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,19 +11,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 
-public class FlightsStatusPage extends AbstractPage {
-
-    public FlightsStatusPage (WebDriver driver)
-    {
-        super(driver);
-        PageFactory.initElements(this.driver, this);
-    }
+public class FlightsStatusPage extends AbstractPage
+{
 
     private final static String BASE_URL = "http://www.vueling.com/en/vueling-services/flight-information/flights-status";
-    private final static String  PATH_TO_BUTTON_NEXT_IN_CALENDER = ".//*[@id='datePickerContainer']//a[@data-handler = 'next']";
+    private final static String PATH_TO_BUTTON_NEXT_IN_CALENDER = ".//*[@id='datePickerContainer']//a[@data-handler = 'next']";
     private final static String PATH_TO_STATION_LIST = "//*[@id=\"stationsList\"]/ul/li/a/strong";
-    //private final static String PARAM_FOR_JAVA_SCRIPT = "arguments[0].click();";
-
+    private final String severalFlightTablePath = "//div[@class = 'wrap-table-estado-vuelos fullWidth']";
 
     @FindBy(xpath = "//*[@id='radiosBuscador']//label[contains(text(), 'Flight number')]")
     private WebElement buttonFlightNumber;
@@ -74,16 +67,20 @@ public class FlightsStatusPage extends AbstractPage {
     @FindBy(id = "AvailabilitySearchInputXmlSearchView_LinkButtonNewSearch")
     private WebElement searchForFlights;
 
-    private final String severalFlightTablePath = "//div[@class = 'wrap-table-estado-vuelos fullWidth']";
-
     @FindBy(xpath = severalFlightTablePath)
     private WebElement severalFlightsTable;
 
     @FindBy(xpath = "//div[@class = 'wrap-table-estado-vuelos fullWidth']/table/tbody/tr")
-    private List <WebElement> flightRawsList;
+    private List<WebElement> flightRawsList;
 
     @FindBy(xpath = "//div[@class = 'wrap-table-estado-vuelos fullWidth']/div[@class='intxt']")
     private WebElement flightsTableHeading;
+
+    public FlightsStatusPage(WebDriver driver)
+    {
+        super(driver);
+        PageFactory.initElements(this.driver, this);
+    }
 
     public void openPage()
     {
@@ -98,7 +95,8 @@ public class FlightsStatusPage extends AbstractPage {
         return this;
     }
 
-    private void chooseCityForLight(String from, String to) {
+    private void chooseCityForLight(String from, String to)
+    {
         WebDriverWait wait = new WebDriverWait(driver, 50);
         fieldFromFlight.sendKeys(from);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(PATH_TO_STATION_LIST)));
@@ -118,26 +116,30 @@ public class FlightsStatusPage extends AbstractPage {
 
     public boolean severalFlightsTableDisplayed()
     {
-        return driver.findElements( By.xpath(severalFlightTablePath) ).size() != 0;
+        return driver.findElements(By.xpath(severalFlightTablePath)).size() != 0;
     }
 
     public boolean correctMultipleFlightsInfoDisplayed(String from, String to, String date)
     {
-        if(severalFlightsTableDisplayed()) {
-            for (WebElement element : flightRawsList) {
+        if (severalFlightsTableDisplayed())
+        {
+            for (WebElement element : flightRawsList)
+            {
                 if (!element.findElement(By.xpath("td[2]")).getText().equals(from)
-                    &&(!element.findElement(By.xpath("td[3]")).getText().equals(to))) {
+                        || !element.findElement(By.xpath("td[3]")).getText().equals(to))
+                {
                     return false;
                 }
             }
-            return (!(flightsTableHeading.getText().contains(date)
+            boolean result = (flightsTableHeading.getText().contains(date)
                     && flightsTableHeading.getText().contains(from)
-                    && flightsTableHeading.getText().contains(to)));
+                    && flightsTableHeading.getText().contains(to));
+            return result;
         }
         return false;
     }
 
-    public FlightsStatusPage flightsStatusForFlightNumber (String flightNumber, String dateOfFlight)
+    public FlightsStatusPage flightsStatusForFlightNumber(String flightNumber, String dateOfFlight)
     {
         buttonFlightNumber.click();
         fieldFlightNumber.sendKeys(flightNumber);
@@ -149,7 +151,7 @@ public class FlightsStatusPage extends AbstractPage {
 
     private void chooseDateOfFlight(String dateOfFlight)
     {
-        String [] splitDate = dateOfFlight.split("/");
+        String[] splitDate = dateOfFlight.split("/");
         while (!monthInCalender.getText().equals(splitDate[1]))
         {
             driver.findElement(By.xpath(PATH_TO_BUTTON_NEXT_IN_CALENDER)).click();
@@ -157,22 +159,22 @@ public class FlightsStatusPage extends AbstractPage {
         driver.findElement(By.xpath("//*[@id='datePickerContainer']//div[contains(@class, 'ui-datepicker-group-first')]//a[text() ='" + splitDate[0] + "']")).click();
     }
 
-    public String takeStatusFlight ()
+    public String takeStatusFlight()
     {
         return flightStatus.getText();
     }
 
-    public String takeFlightDate ()
+    public String takeFlightDate()
     {
         return dateOnCheckFlightBox.getText();
     }
 
-    public String takeCityDeparture ()
+    public String takeCityDeparture()
     {
         return checkCityDeparture.getText();
     }
 
-    public String takeCityArrival ()
+    public String takeCityArrival()
     {
         return checkCityArrival.getText();
     }

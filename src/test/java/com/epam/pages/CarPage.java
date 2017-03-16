@@ -8,7 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class CarPage extends AbstractPage {
+public class CarPage extends AbstractPage
+{
 
     private final static String BASE_URL = "http://cars.vueling.com/en/";
 
@@ -27,15 +28,19 @@ public class CarPage extends AbstractPage {
     @FindBy(id = "downtown-vehicle-anchor")
     private WebElement mapWithCars;
 
-    public CarPage(WebDriver driver) {
+    public CarPage(WebDriver driver)
+    {
         super(driver);
         PageFactory.initElements(this.driver, this);
     }
-    public void openPage() {
+
+    public void openPage()
+    {
         driver.navigate().to(BASE_URL);
     }
 
-    public void inputCarParameters(String city) {
+    public void inputCarParameters(String city)
+    {
         cityOfDeparture.sendKeys(city);
         List<WebElement> cities = driver.findElements(By.xpath("//span[@ng-bind-html='::item.label']"));
         cities.get(3).click();
@@ -51,9 +56,8 @@ public class CarPage extends AbstractPage {
         buttonSearch.click();
     }
 
-    public boolean isMapDisplay() {
+    public boolean isMapDisplay()
+    {
         return mapWithCars.isDisplayed();
     }
-
-
 }

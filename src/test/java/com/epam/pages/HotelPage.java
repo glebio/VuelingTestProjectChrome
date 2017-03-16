@@ -8,19 +8,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-public class HotelPage extends AbstractPage{
+public class HotelPage extends AbstractPage
+{
     private final String BASE_URL = "http://hotel.vueling.com/?label=vlng-tab-home&lang=en";
-
-    public HotelPage(WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(this.driver, this);
-    }
-
-    @Override
-    public void openPage()
-    {
-        driver.navigate().to(BASE_URL);
-    }
 
     @FindBy(id = "ss")
     private WebElement inputDest;
@@ -43,7 +33,20 @@ public class HotelPage extends AbstractPage{
     @FindBy(className = "sr_header")
     private WebElement pageTitle;
 
-    public void inputHotelParameters(String country){
+    public HotelPage(WebDriver driver)
+    {
+        super(driver);
+        PageFactory.initElements(this.driver, this);
+    }
+
+    @Override
+    public void openPage()
+    {
+        driver.navigate().to(BASE_URL);
+    }
+
+    public void inputHotelParameters(String country)
+    {
         WebDriverWait wait = new WebDriverWait(driver, 50);
         inputDest.sendKeys(country);
         wait.withTimeout(1, TimeUnit.SECONDS);
@@ -51,16 +54,20 @@ public class HotelPage extends AbstractPage{
         checkinDate.click();
     }
 
-    public boolean clickSubmit () {
-        if(submitButton.isDisplayed()) {
+    public boolean clickSubmit()
+    {
+        if (submitButton.isDisplayed())
+        {
             super.clickOnButton(submitButton);
             return true;
-        } else {
+        } else
+        {
             return false;
         }
     }
 
-    public String getPageTitle () {
+    public String getPageTitle()
+    {
         return pageTitle.getText();
     }
 }

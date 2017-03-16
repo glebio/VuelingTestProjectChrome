@@ -1,25 +1,17 @@
 package com.epam.pages;
 
 import com.epam.bean.Person;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
 
-public class ContactPassengerPage extends AbstractPage  {
-
-    public ContactPassengerPage (WebDriver driver)
-    {
-        super(driver);
-        PageFactory.initElements(this.driver, this);
-    }
+public class ContactPassengerPage extends AbstractPage
+{
 
     private final String BASE_URL = "http://www.vueling.com/en";
     @FindBy(xpath = "//label[@for='ControlGroupMainContact_PassengerInputViewContactView_DropDownListTitle_0MR']")
@@ -36,7 +28,6 @@ public class ContactPassengerPage extends AbstractPage  {
 
     @FindBy(id = "ControlGroupMainContact_ControlGroupContactControls_ContactInputView_DropDownListCountry")
     private WebElement dropDownListCountryWE;
-
 
     @FindBy(id = "ControlGroupMainContact_ControlGroupContactControls_ContactInputView_TextBoxCity")
     private WebElement textBoxCity;
@@ -56,6 +47,12 @@ public class ContactPassengerPage extends AbstractPage  {
     @FindBy(xpath = "//*[@id='ControlGroupMainContact_PassengerInputViewContactView_DropDownListTitle_0Div']/div/div[contains(@class, 'check--OK')]")
     private WebElement checkOkGender;
 
+    public ContactPassengerPage(WebDriver driver)
+    {
+        super(driver);
+        PageFactory.initElements(this.driver, this);
+    }
+
     public void openPage()
     {
         driver.navigate().to(BASE_URL);
@@ -71,8 +68,6 @@ public class ContactPassengerPage extends AbstractPage  {
         Select dropDownListCountrySelect = new Select(dropDownListCountryWE);
         Select dropDownListPhonePrefixSelect = new Select(dropDownListPhonePrefixWE);
         driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
-//        WebDriverWait wait = new WebDriverWait(driver, 50);
-//        wait.until(ExpectedConditions.visibilityOf(mrButton));
         textBoxName.clear();
         textBoxName.sendKeys(person.getName());
         textBoxSurname.clear();
@@ -88,12 +83,14 @@ public class ContactPassengerPage extends AbstractPage  {
         mrButton.click();
     }
 
-    public boolean clickSubmit ()
+    public boolean clickSubmit()
     {
-        if(contactLinkButtonSubmit.isDisplayed()) {
+        if (contactLinkButtonSubmit.isDisplayed())
+        {
             super.clickOnButton(contactLinkButtonSubmit);
             return true;
-        } else {
+        } else
+        {
             return false;
         }
     }
