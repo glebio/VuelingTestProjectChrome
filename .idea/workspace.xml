@@ -4,11 +4,7 @@
     <bookmark url="file://$USER_HOME$/.IdeaIC2016.3/system/temp-testng-customsuite.xml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ec6bb4f-4033-496c-886c-741b95f8a3e1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/epam/TestWD.java" afterPath="$PROJECT_DIR$/src/test/java/com/epam/TestWD.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/epam/util/DriverSingleton.java" afterPath="$PROJECT_DIR$/src/test/java/com/epam/util/DriverSingleton.java" />
-    </list>
+    <list default="true" id="0ec6bb4f-4033-496c-886c-741b95f8a3e1" name="Default" comment="" />
     <ignored path="testWD.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,7 +24,18 @@
     <favorites_list name="testWD" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="TestWD.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/TestWD.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="831">
+              <caret line="120" column="5" lean-forward="true" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -208,7 +215,7 @@
       <recent name="C:\Users\Anastasiya_Mashkevic\IdeaProjects\testWD2\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TestWD.oneCanFindCar">
+  <component name="RunManager" selected="TestNG.TestWD">
     <configuration default="false" name="TestWD" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -587,8 +594,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.TestWD.oneCanFindCar" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.TestWD" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.TestWD" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.TestWD.oneCanFindCar" />
         <item index="2" class="java.lang.String" itemvalue="TestNG.TestWD.oneCanCheckRightPriceForTwoPassengerFlightWithReturn" />
         <item index="3" class="java.lang.String" itemvalue="TestNG.TestWD.oneCanCheckRightPriceForTwoPassengerFlightOneWay" />
         <item index="4" class="java.lang.String" itemvalue="TestNG.TestWD.oneCanSearchFlight" />
@@ -633,10 +640,10 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestWD - 2017.03.15 at 16h 14m 39s.xml">
+    <history-entry file="TestWD - 2017.03.15 at 16h 21m 57s.xml">
       <configuration name="TestWD" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestWD - 2017.03.15 at 16h 21m 57s.xml">
+    <history-entry file="TestWD - 2017.03.16 at 13h 43m 06s.xml">
       <configuration name="TestWD" configurationId="TestNG" />
     </history-entry>
     <history-entry file="TestWD_oneCanCheckRightPriceForTwoPassengerFlightOneWay - 2017.03.15 at 15h 58m 52s.xml">
@@ -666,7 +673,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -683,7 +690,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24253732" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24253732" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1058,7 +1065,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/TestWD.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2081">
+        <state relative-caret-position="831">
           <caret line="120" column="5" lean-forward="true" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
           <folding />
         </state>
