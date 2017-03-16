@@ -17,7 +17,7 @@ public class MainPage extends AbstractPage {
 
     private final static String BASE_URL = "http://www.vueling.com/en";
     private final static String PATH_TO_STATION_LIST = "//*[@id=\"stationsList\"]/ul/li/a/strong";
-    private final static String  PATH_TO_BUTTON_NEXT_IN_CALENDER = ".//*[@id='datePickerContainer']//a[@data-handler = 'next']";
+    private final static String PATH_TO_BUTTON_NEXT_IN_CALENDER = ".//*[@id='datePickerContainer']//a[@data-handler = 'next']";
     private final static String PARAM_FOR_JAVA_SCRIPT = "arguments[0].click();";
 
 
@@ -66,13 +66,11 @@ public class MainPage extends AbstractPage {
     @FindBy(xpath = "//*[@id='stationsList']/ul/li/a[@class = 'optionActive']")
     private WebElement clickOnNeedCity;
 
-    public void openPage()
-    {
+    public void openPage() {
         driver.navigate().to(BASE_URL);
     }
 
-    public MainPage login(String login, String psw)
-    {
+    public MainPage login(String login, String psw) {
         buttonForLogin.click();
         fieldUserNameForLogin.clear();
         fieldUserNameForLogin.sendKeys(login);
@@ -82,33 +80,27 @@ public class MainPage extends AbstractPage {
         return this;
     }
 
-    public String checkIsLogin()
-    {
+    public String checkIsLogin() {
         return fieldForCheckIsLogin.getText();
     }
 
-    public void chooseFlightReturn()
-    {
+    public void chooseFlightReturn() {
         super.clickOnButton(buttonReturn);
     }
 
-    public void chooseFlightOneWay()
-    {
+    public void chooseFlightOneWay() {
         super.clickOnButton(buttonOneWayOnly);
     }
 
-    public void chooseTwoPassenger ()
-    {
+    public void chooseTwoPassenger() {
         super.clickOnButton(twoPasengers);
     }
 
-    public void clickButtonSearchFlight()
-    {
+    public void clickButtonSearchFlight() {
         super.clickOnButton(searchForFlights);
     }
 
-    public void chooseCityForFlight(String cityOfDeparture, String cityOfArrival)
-    {
+    public void chooseCityForFlight(String cityOfDeparture, String cityOfArrival) {
         WebDriverWait wait = new WebDriverWait(driver, 50);
         fieldFromFlight.sendKeys(cityOfDeparture);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(PATH_TO_STATION_LIST)));
@@ -119,9 +111,14 @@ public class MainPage extends AbstractPage {
         clickOnNeedCity.click();
     }
 
-    public void chooseDateFlight(String dateOfFlight)
-    {
-        WebDriverWait wait = new WebDriverWait(driver, 50);
+    public void chooseDateFlight(String dateOfFlight) {
+
+
+        //WebDriverWait wait = new WebDriverWait(driver, 50);
+
+
+
+
         //String[] splitDate = dateOfFlight.split("/");
         // while (!monthInCalenderLeft.getText().equals(splitDate[1])) {
         //     wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(PATH_TO_BUTTON_NEXT_IN_CALENDER)));
@@ -129,12 +126,27 @@ public class MainPage extends AbstractPage {
         // }
         // if (monthInCalenderLeft.getText().equals(splitDate[1]))
         //List<WebElement> availableDatesList = driver.findElements(By.xpath("//*[@id='datePickerContainer']//div[contains(@class, 'ui-datepicker-group-last')]//a"));
-        List<WebElement> availableDatesList = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@id='datePickerContainer']//div[contains(@class, 'ui-datepicker-group-last')]//a")));
-        WebElement webElement = availableDatesList.get(availableDatesList.size()-1);
+
+
+
+        /*List<WebElement> availableDatesList = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("/*//*[@id='datePickerContainer']//div[contains(@class, 'ui-datepicker-group-last')]//a")));
+        WebElement webElement = availableDatesList.get(availableDatesList.size() - 1);
         wait.until(ExpectedConditions.elementToBeClickable(webElement));
         JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript(PARAM_FOR_JAVA_SCRIPT, webElement);
-   }
+        jse.executeScript(PARAM_FOR_JAVA_SCRIPT, webElement);*/
+
+
+        WebDriverWait wait = new WebDriverWait(driver, 50);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(PATH_TO_BUTTON_NEXT_IN_CALENDER)));
+        List<WebElement> availableDatesList = driver.findElements(By.xpath(".//*[@data-handler='selectDay']"));
+        WebElement webElement = availableDatesList.get(availableDatesList.size() - 2);
+        JavascriptExecutor jse2 = (JavascriptExecutor) driver;
+        jse2.executeScript(PARAM_FOR_JAVA_SCRIPT, webElement);
+
+
+
+
+    }
 }
 
 

@@ -11,8 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-public class MainPageServiceCenter extends AbstractPage
-{
+public class MainPageServiceCenter extends AbstractPage {
 
     public MainPageServiceCenter(WebDriver driver) {
         super(driver);
@@ -31,7 +30,7 @@ public class MainPageServiceCenter extends AbstractPage
         driver.navigate().to(BASE_URL);
     }
 
-    public boolean toChangeContactInfo (String country) {
+    public boolean toChangeContactInfo(String country) {
         driver.findElement(By.id("centralBilletes"));
 
         List<WebElement> elements = driver.findElements(By.xpath(".//*[@id='centralBilletes']/option"));
@@ -48,12 +47,12 @@ public class MainPageServiceCenter extends AbstractPage
         return false;
     }
 
-    private boolean isPhoneCorrespondsToTheCountry (String country, WebElement webElement) {
+    private boolean isPhoneCorrespondsToTheCountry(String country, WebElement webElement) {
         for (Map.Entry<String, String> pair : takeArrayWithPhoneAndCountry(webElement).entrySet()) {
             if (pair.getKey().equals(country) && pair.getValue().equals(getPhoneCorrespondsToTheCity())) {
                 return true;
-                }
             }
+        }
         return false;
     }
 
@@ -64,7 +63,7 @@ public class MainPageServiceCenter extends AbstractPage
         }
     }
 
-    private HashMap<String, String> takeArrayWithPhoneAndCountry (WebElement webElement) {
+    private HashMap<String, String> takeArrayWithPhoneAndCountry(WebElement webElement) {
         HashMap<String, String> arrayPhone = new HashMap<String, String>();
         String city = webElement.getText();
         webElement.click();
