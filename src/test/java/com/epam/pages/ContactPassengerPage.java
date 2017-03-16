@@ -63,7 +63,7 @@ public class ContactPassengerPage extends AbstractPage
         return driver.getCurrentUrl().contains(BASE_URL);
     }
 
-    public void enterAndSubmitPassengerContact(Person person)
+    public void enterAndSubmitPassengerContactInfo(Person person)
     {
         Select dropDownListCountrySelect = new Select(dropDownListCountryWE);
         Select dropDownListPhonePrefixSelect = new Select(dropDownListPhonePrefixWE);

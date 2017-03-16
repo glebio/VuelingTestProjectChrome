@@ -83,7 +83,7 @@ public class MainPage extends AbstractPage
         return this;
     }
 
-    public String checkIsLogin()
+    public String verifyLogin()
     {
         return fieldForCheckIsLogin.getText();
     }

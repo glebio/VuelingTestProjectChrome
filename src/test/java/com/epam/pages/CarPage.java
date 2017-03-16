@@ -56,7 +56,7 @@ public class CarPage extends AbstractPage
         buttonSearch.click();
     }
 
-    public boolean isMapDisplay()
+    public boolean isMapDisplayed()
     {
         return mapWithCars.isDisplayed();
     }

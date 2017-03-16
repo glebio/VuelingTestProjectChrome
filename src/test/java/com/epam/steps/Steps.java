@@ -32,17 +32,17 @@ public class Steps
     public boolean isLoginToVueling()
     {
         MainPage vuelingMainPage = new MainPage(driver);
-        return vuelingMainPage.checkIsLogin().contains("Hi");
+        return vuelingMainPage.verifyLogin().contains("Hi");
     }
 
-    public void startWorkWithFlightsStatusPageWithFlightNumber(String flightNumber, String dateOfFlight)
+    public void openFlightsStatusPageWithFlightNumberInsertFlightNumberAndChooseDate(String flightNumber, String dateOfFlight)
     {
         FlightsStatusPage flightsStatusPage = new FlightsStatusPage(driver);
         flightsStatusPage.openPage();
         flightsStatusPage.flightsStatusForFlightNumber(flightNumber, dateOfFlight);
     }
 
-    public void startWorkWithMainPage(String cityOfDeparture, String cityOfArrival, String dateForward)
+    public void openMainPageChooseCityOfDepartureCityOfArrivalAndDate(String cityOfDeparture, String cityOfArrival, String dateForward)
     {
         MainPage mainPage = new MainPage(driver);
         mainPage.openPage();
@@ -59,7 +59,7 @@ public class Steps
         mainPage.chooseDateFlight(dateBack);
         mainPage.clickButtonSearchFlight();
         scheduleSelectPage.chooseFlightTwoWays();
-        contactPassengerPage.enterAndSubmitPassengerContact(person);
+        contactPassengerPage.enterAndSubmitPassengerContactInfo(person);
     }
 
 //    public boolean isChangeContactInfo(String country) {
@@ -71,11 +71,11 @@ public class Steps
     public double takePriceFromWebSiteFor1Passenger()
     {
         ScheduleSelectPage scheduleSelectPage = new ScheduleSelectPage(driver);
-        scheduleSelectPage.chooseFlightOneWays();
-        return scheduleSelectPage.getPriceForOnePassenger(scheduleSelectPage.getWebElementToСheckPrice());
+        scheduleSelectPage.chooseFlightOneWay();
+        return scheduleSelectPage.getPriceForOnePassenger(scheduleSelectPage.getWebElementToVerifyPrice());
     }
 
-    public double takeTotalPriceForAllPassenger()
+    public double takeTotalPriceForAllPassengers()
     {
         ScheduleSelectPage scheduleSelectPage = new ScheduleSelectPage(driver);
         return scheduleSelectPage.getTotalPrice();
@@ -111,7 +111,7 @@ public class Steps
         return scheduleSelectPage.getFinalPrice();
     }
 
-    public boolean checkFlight(String dateBack)
+    public boolean verifyFlight(String dateBack)
     {
         MainPage mainPage = new MainPage(driver);
         ScheduleSelectPage scheduleSelectPage = new ScheduleSelectPage(driver);
@@ -129,36 +129,36 @@ public class Steps
     public boolean isFillInfoCorrect(Person person)
     {
         ContactPassengerPage contactPassengerPage = new ContactPassengerPage(driver);
-        contactPassengerPage.enterAndSubmitPassengerContact(person);
+        contactPassengerPage.enterAndSubmitPassengerContactInfo(person);
         return contactPassengerPage.clickSubmit();
     }
 
-    public String checkFlightStatus()
+    public String verifyFlightStatus()
     {
         FlightsStatusPage flightsStatusPage = new FlightsStatusPage(driver);
         return flightsStatusPage.takeStatusFlight();
     }
 
-    public String checkDateFlight()
+    public String verifyDateFlight()
     {
         FlightsStatusPage flightsStatusPage = new FlightsStatusPage(driver);
         String[] date = flightsStatusPage.takeFlightDate().split(" ");
         return date[1] + "/" + date[2];
     }
 
-    public String checkCityDeparture()
+    public String verifyCityDeparture()
     {
         FlightsStatusPage flightsStatusPage = new FlightsStatusPage(driver);
         return flightsStatusPage.takeCityDeparture();
     }
 
-    public String checkCityArrival()
+    public String verifyCityArrival()
     {
         FlightsStatusPage flightsStatusPage = new FlightsStatusPage(driver);
         return flightsStatusPage.takeCityArrival();
     }
 
-    public void checkAirport(String city)
+    public void verifyAirport(String city)
     {
         InfoAndSalesOfficesPage infoAndSalesOfficesPage = new InfoAndSalesOfficesPage(driver);
         infoAndSalesOfficesPage.openPage();
@@ -180,7 +180,7 @@ public class Steps
         mainPage.chooseDateFlight(dateBack);
         mainPage.clickButtonSearchFlight();
         scheduleSelectPage.chooseFlightTwoWays();
-        contactPassengerPage.enterAndSubmitPassengerContact(person);
+        contactPassengerPage.enterAndSubmitPassengerContactInfo(person);
         contactPassengerPage.clickSubmit();
         Thread.sleep(13000);
         seatAndLuggagePage.addLuggageToTicket();
@@ -196,7 +196,7 @@ public class Steps
         mainPage.chooseDateFlight(dateBack);
         mainPage.clickButtonSearchFlight();
         scheduleSelectPage.chooseFlightTwoWays();
-        contactPassengerPage.enterAndSubmitPassengerContact(person);
+        contactPassengerPage.enterAndSubmitPassengerContactInfo(person);
         contactPassengerPage.clickSubmit();
         Thread.sleep(13000);
         seatAndLuggagePage.addSeatToTicket();
@@ -227,7 +227,7 @@ public class Steps
         return seatAndLuggagePage.getPriceForLuggageFromTable();
     }
 
-    public void startWorkWithFlightsStatusPageWithDestinations(String from, String to, String date)
+    public void openFlightsStatusPageWithDestinationsChooseDepartureAndArrivalCitiesAndDate(String from, String to, String date)
     {
         FlightsStatusPage flightsStatusPage = new FlightsStatusPage(driver);
         flightsStatusPage.openPage();
@@ -267,9 +267,9 @@ public class Steps
         carPage.inputCarParameters(city);
     }
 
-    public boolean isMapWithCarOffersDispaly()
+    public boolean isMapWithCarOffersDisplayed()
     {
         CarPage carPage = new CarPage(driver);
-        return carPage.isMapDisplay();
+        return carPage.isMapDisplayed();
     }
 }

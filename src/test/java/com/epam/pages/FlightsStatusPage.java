@@ -89,13 +89,13 @@ public class FlightsStatusPage extends AbstractPage
 
     public FlightsStatusPage flightsStatusForDestinations(String from, String to, String date)
     {
-        chooseCityForLight(from, to);
+        chooseCityForFlight(from, to);
         chooseDateOfFlight(date);
         clickButtonSearchFlight();
         return this;
     }
 
-    private void chooseCityForLight(String from, String to)
+    private void chooseCityForFlight(String from, String to)
     {
         WebDriverWait wait = new WebDriverWait(driver, 50);
         fieldFromFlight.sendKeys(from);

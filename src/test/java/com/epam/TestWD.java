@@ -34,7 +34,7 @@ public class TestWD
     }
 
     @Test
-    public void oneCanLoginGithub()
+    public void oneCanLogin()
     {
         steps.loginToVueling(LOGIN, PASSWORD);
         Assert.assertTrue(steps.isLoginToVueling());
@@ -48,38 +48,38 @@ public class TestWD
     @Test
     public void oneCanSearchFlight()
     {
-        steps.startWorkWithMainPage(CITY_OF_DEPARTURE, CITY_OF_ARRIVAL, DATE_FORWARD);
-        Assert.assertTrue(steps.checkFlight(DATE_BACK));
+        steps.openMainPageChooseCityOfDepartureCityOfArrivalAndDate(CITY_OF_DEPARTURE, CITY_OF_ARRIVAL, DATE_FORWARD);
+        Assert.assertTrue(steps.verifyFlight(DATE_BACK));
     }
 
     @Test
     public void oneCanFillInfoAboutPassenger()
     {
         Person person = new Person("John", "Smith", "Minsk", "456783", "johnsmith@gmail.com", "BY", "+375");
-        steps.startWorkWithMainPage(CITY_OF_DEPARTURE, CITY_OF_ARRIVAL, DATE_FORWARD);
+        steps.openMainPageChooseCityOfDepartureCityOfArrivalAndDate(CITY_OF_DEPARTURE, CITY_OF_ARRIVAL, DATE_FORWARD);
         steps.fillPassengerInformation(person, DATE_BACK);
         Assert.assertTrue(steps.isFillInfoCorrect(person));
     }
 
     @Test
-    public void oneCanCheckStatusFlight()
+    public void oneCanVerifyStatusFlight()
     {
-        steps.startWorkWithFlightsStatusPageWithFlightNumber(FLIGHT_NUMBER, DATE_OF_FLIGHT);
-        Assert.assertEquals(steps.checkFlightStatus(), ("Not operating"));
-        Assert.assertEquals(steps.checkDateFlight(), DATE_OF_FLIGHT);
-        Assert.assertEquals(steps.checkCityDeparture(), CITY_OF_DEPARTURE);
-        Assert.assertEquals(steps.checkCityArrival(), CITY_OF_ARRIVAL);
+        steps.openFlightsStatusPageWithFlightNumberInsertFlightNumberAndChooseDate(FLIGHT_NUMBER, DATE_OF_FLIGHT);
+        Assert.assertEquals(steps.verifyFlightStatus(), ("Not operating"));
+        Assert.assertEquals(steps.verifyDateFlight(), DATE_OF_FLIGHT);
+        Assert.assertEquals(steps.verifyCityDeparture(), CITY_OF_DEPARTURE);
+        Assert.assertEquals(steps.verifyCityArrival(), CITY_OF_ARRIVAL);
     }
 
     @Test
-    public void oneCanCheckRightPriceForTwoPassengerFlightOneWay()
+    public void oneCanVerifyRightPriceForTwoPassengersFlightOneWay()
     {
         steps.canChooseFlightOneWay(CITY_OF_DEPARTURE, CITY_OF_ARRIVAL, DATE_FORWARD);
-        Assert.assertEquals((steps.takePriceFromWebSiteFor1Passenger() * NUMBER_OF_PASSENGERS), steps.takeTotalPriceForAllPassenger());
+        Assert.assertEquals((steps.takePriceFromWebSiteFor1Passenger() * NUMBER_OF_PASSENGERS), steps.takeTotalPriceForAllPassengers());
     }
 
     @Test
-    public void oneCanCheckRightPriceForTwoPassengerFlightWithReturn()
+    public void oneCanVerifyRightPriceForTwoPassengersFlightWithReturn()
     {
         steps.canChooseFlightWithReturn(CITY_OF_DEPARTURE, CITY_OF_ARRIVAL, DATE_FORWARD, DATE_BACK);
         double priceWithoutFee = steps.takePriceFromWebSiteFor1Passenger() * NUMBER_OF_PASSENGERS;
@@ -92,43 +92,43 @@ public class TestWD
     @Test
     public void canFindAirport()
     {
-        steps.checkAirport(CITY);
+        steps.verifyAirport(CITY);
         Assert.assertTrue(steps.isAirportFound());
     }
 
     @Test
-    public void oneCanCheckAddLuggage() throws InterruptedException
+    public void oneCanVerifyAddLuggage() throws InterruptedException
     {
         Person person = new Person("John", "Smith", "Minsk", "456783", "johnsmith@gmail.com", "BY", "+375");
-        steps.startWorkWithMainPage(CITY_OF_DEPARTURE, CITY_OF_ARRIVAL, DATE_FORWARD);
+        steps.openMainPageChooseCityOfDepartureCityOfArrivalAndDate(CITY_OF_DEPARTURE, CITY_OF_ARRIVAL, DATE_FORWARD);
         steps.addLuggage(person, DATE_BACK);
         Assert.assertEquals(steps.takePriceForPassengerWithLuggage(), steps.takePriceForPassengerWithLuggageFromTable());
     }
 
     @Test
-    public void oneCanCheckAddSeat() throws InterruptedException
+    public void oneCanVerifyAddSeat() throws InterruptedException
     {
         Person person = new Person("John", "Smith", "Minsk", "456783", "johnsmith@gmail.com", "BY", "+375");
-        steps.startWorkWithMainPage(CITY_OF_DEPARTURE, CITY_OF_ARRIVAL, DATE_FORWARD);
+        steps.openMainPageChooseCityOfDepartureCityOfArrivalAndDate(CITY_OF_DEPARTURE, CITY_OF_ARRIVAL, DATE_FORWARD);
         steps.addSeat(person, DATE_BACK);
         Assert.assertEquals(steps.takeTotalPriceForPassengerWithSeats() / FLIGHT_WITH_RETURN, steps.takePriceForPassengerWithSeatsFromTable());
     }
 
     @Test
-    public void oneCanCheckStatusFlightByDestinations()
+    public void oneCanVerifyStatusFlightByDestinations()
     {
-        steps.startWorkWithFlightsStatusPageWithDestinations(CITY_OF_DEPARTURE, CITY_OF_ARRIVAL, DATE_OF_FLIGHT);
+        steps.openFlightsStatusPageWithDestinationsChooseDepartureAndArrivalCitiesAndDate(CITY_OF_DEPARTURE, CITY_OF_ARRIVAL, DATE_OF_FLIGHT);
         Assert.assertFalse(steps.severalFlightsTableDisplayed());
-        Assert.assertEquals(steps.checkFlightStatus(), ("Not operating"));
-        Assert.assertEquals(steps.checkDateFlight(), DATE_OF_FLIGHT);
-        Assert.assertEquals(steps.checkCityDeparture(), CITY_OF_DEPARTURE);
-        Assert.assertEquals(steps.checkCityArrival(), CITY_OF_ARRIVAL);
+        Assert.assertEquals(steps.verifyFlightStatus(), ("Not operating"));
+        Assert.assertEquals(steps.verifyDateFlight(), DATE_OF_FLIGHT);
+        Assert.assertEquals(steps.verifyCityDeparture(), CITY_OF_DEPARTURE);
+        Assert.assertEquals(steps.verifyCityArrival(), CITY_OF_ARRIVAL);
     }
 
     @Test
-    public void oneCanCheckStatusFlightByDestinationsWhenMultipleFlightsDisplayed()
+    public void oneCanVerifyStatusFlightByDestinationsWhenMultipleFlightsDisplayed()
     {
-        steps.startWorkWithFlightsStatusPageWithDestinations(CITY_DEPARTURE, CITY_ARRIVAL, DATE_OF_FLIGHT);
+        steps.openFlightsStatusPageWithDestinationsChooseDepartureAndArrivalCitiesAndDate(CITY_DEPARTURE, CITY_ARRIVAL, DATE_OF_FLIGHT);
         Assert.assertTrue(steps.severalFlightsTableDisplayed());
         Assert.assertTrue(steps.correctMultipleFlightsInfoDisplayed(CITY_DEPARTURE, CITY_ARRIVAL, FULL_FORMAT_FLIGHT_DATE));
     }
@@ -144,7 +144,7 @@ public class TestWD
     public void oneCanFindCar()
     {
         steps.enterCarParameters(CITY_OF_ARRIVAL);
-        Assert.assertTrue(steps.isMapWithCarOffersDispaly());
+        Assert.assertTrue(steps.isMapWithCarOffersDisplayed());
     }
 
     @AfterClass(description = "Stop Browser")

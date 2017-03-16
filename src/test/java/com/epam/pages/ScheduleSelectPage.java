@@ -76,7 +76,7 @@ public class ScheduleSelectPage extends AbstractPage
         }
     }
 
-    public void chooseFlightOneWays()
+    public void chooseFlightOneWay()
     {
         super.clickOnButton(basicOutboundButton);
         driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
@@ -111,7 +111,7 @@ public class ScheduleSelectPage extends AbstractPage
         return super.convertPrice(NUMBER, bookingFee);
     }
 
-    public WebElement getWebElementToСheckPrice()
+    public WebElement getWebElementToVerifyPrice()
     {
         return basicOutboundButton;
     }
