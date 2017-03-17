@@ -70,9 +70,10 @@ public class SeatAndLuggagePage extends AbstractPage {
         dropDownListLuggageSelect.selectByValue("BAG1");
     }
 
-    public void addSeatToTicket() {
+    public void addSeatToTicket() throws InterruptedException {
         chooseSeat.click();
         super.clickOnButton(chooseConcreteSeatTo);
+        Thread.sleep(1000);
         List<WebElement> elements = driver.findElements(By.xpath(".//*[@id='seat_0_3A']"));
         elements.get(1).click();
     }
