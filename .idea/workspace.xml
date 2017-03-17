@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ec6bb4f-4033-496c-886c-741b95f8a3e1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/epam/TestWD.class" afterPath="$PROJECT_DIR$/target/test-classes/com/epam/TestWD.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/epam/pages/AbstractPage.class" afterPath="$PROJECT_DIR$/target/test-classes/com/epam/pages/AbstractPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/epam/pages/ContactPassengerPage.class" afterPath="$PROJECT_DIR$/target/test-classes/com/epam/pages/ContactPassengerPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/epam/pages/FlightsStatusPage.class" afterPath="$PROJECT_DIR$/target/test-classes/com/epam/pages/FlightsStatusPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/epam/pages/HotelPage.class" afterPath="$PROJECT_DIR$/target/test-classes/com/epam/pages/HotelPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/epam/pages/InfoAndSalesOfficesPage.class" afterPath="$PROJECT_DIR$/target/test-classes/com/epam/pages/InfoAndSalesOfficesPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/epam/pages/MainPage.class" afterPath="$PROJECT_DIR$/target/test-classes/com/epam/pages/MainPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/epam/pages/ScheduleSelectPage.class" afterPath="$PROJECT_DIR$/target/test-classes/com/epam/pages/ScheduleSelectPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/epam/pages/SeatAndLuggagePage.class" afterPath="$PROJECT_DIR$/target/test-classes/com/epam/pages/SeatAndLuggagePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/epam/TestWD.java" afterPath="$PROJECT_DIR$/src/test/java/com/epam/TestWD.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/epam/pages/AbstractPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/epam/pages/AbstractPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/epam/pages/ContactPassengerPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/epam/pages/ContactPassengerPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/epam/pages/FlightsStatusPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/epam/pages/FlightsStatusPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/epam/pages/HotelPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/epam/pages/HotelPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/epam/pages/InfoAndSalesOfficesPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/epam/pages/InfoAndSalesOfficesPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/epam/pages/MainPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/epam/pages/MainPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/epam/pages/ScheduleSelectPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/epam/pages/ScheduleSelectPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/epam/pages/SeatAndLuggagePage.java" afterPath="$PROJECT_DIR$/src/test/java/com/epam/pages/SeatAndLuggagePage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/epam/util/DriverSingleton.java" afterPath="$PROJECT_DIR$/src/test/java/com/epam/util/DriverSingleton.java" />
     </list>
     <ignored path="testWD.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,20 +23,7 @@
     <favorites_list name="testWD" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="MainPage.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/pages/MainPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -74,7 +43,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/test/java/epam/pages/AbstractPage.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/epam/util/DriverSingleton.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/epam/pages/MainPageServiceCenter.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/epam/pages/CarPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/epam/steps/Steps.java" />
@@ -87,6 +55,7 @@
         <option value="$PROJECT_DIR$/src/test/java/com/epam/pages/InfoAndSalesOfficesPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/epam/pages/ScheduleSelectPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/epam/pages/SeatAndLuggagePage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/epam/util/DriverSingleton.java" />
       </list>
     </option>
   </component>
@@ -118,6 +87,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,9 +222,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -276,7 +245,7 @@
       <recent name="C:\Users\Anastasiya_Mashkevic\IdeaProjects\testWD2\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TestWD.oneCanSearchFlight">
+  <component name="RunManager" selected="TestNG.TestWD.oneCanFindCar">
     <configuration default="false" name="TestWD" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -293,39 +262,6 @@
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestWD.oneCanCheckStatusFlightByDestinationsWhenMultipleFlightsDisplayed" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.epam.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="testWD" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="com.epam" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.TestWD" />
-      <option name="METHOD_NAME" value="oneCanCheckStatusFlightByDestinationsWhenMultipleFlightsDisplayed" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -423,6 +359,39 @@
       <option name="PACKAGE_NAME" value="com.epam" />
       <option name="MAIN_CLASS_NAME" value="com.epam.TestWD" />
       <option name="METHOD_NAME" value="oneCanSearchFlight" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestWD.oneCanFindCar" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.epam.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="testWD" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="com.epam" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.TestWD" />
+      <option name="METHOD_NAME" value="oneCanFindCar" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -648,18 +617,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="TestNG.TestWD" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.TestWD.oneCanCheckStatusFlightByDestinationsWhenMultipleFlightsDisplayed" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.TestWD.canFindAirport" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.TestWD.oneCanLogin" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.TestWD.oneCanSearchFlight" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.TestWD.canFindAirport" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.TestWD.oneCanLogin" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.TestWD.oneCanSearchFlight" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.TestWD.oneCanFindCar" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.TestWD.oneCanSearchFlight" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.TestWD.oneCanLogin" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.TestWD.canFindAirport" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.TestWD" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.TestWD.oneCanCheckStatusFlightByDestinationsWhenMultipleFlightsDisplayed" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.TestWD.oneCanFindCar" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.TestWD.oneCanSearchFlight" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.TestWD.oneCanLogin" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.TestWD.canFindAirport" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.TestWD" />
       </list>
     </recent_temporary>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -696,8 +665,8 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestWD_oneCanCheckStatusFlightByDestinationsWhenMultipleFlightsDisplayed - 2017.03.17 at 01h 16m 18s.xml">
-      <configuration name="TestWD.oneCanCheckStatusFlightByDestinationsWhenMultipleFlightsDisplayed" configurationId="TestNG" />
+    <history-entry file="TestWD_oneCanFindCar - 2017.03.17 at 15h 21m 42s.xml">
+      <configuration name="TestWD.oneCanFindCar" configurationId="TestNG" />
     </history-entry>
     <history-entry file="TestWD_oneCanLogin - 2017.03.17 at 12h 52m 47s.xml">
       <configuration name="TestWD.oneCanLogin" configurationId="TestNG" />
@@ -729,11 +698,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.303233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -745,7 +715,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2531983" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25586355" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -756,7 +726,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.303233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -810,6 +779,8 @@
           <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6066#6067#0" expanded="true" />
+            <element signature="e#6101#6102#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -820,6 +791,8 @@
           <caret line="88" column="16" lean-forward="false" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -869,6 +842,8 @@
           <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6066#6067#0" expanded="true" />
+            <element signature="e#6101#6102#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -879,6 +854,8 @@
           <caret line="88" column="16" lean-forward="false" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -953,6 +930,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6066#6067#0" expanded="true" />
+            <element signature="e#6101#6102#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1004,13 +983,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/util/DriverSingleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="37" column="22" lean-forward="false" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1023,7 +995,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1087,16 +1058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/steps/Steps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="256" column="34" lean-forward="true" selection-start-line="256" selection-start-column="34" selection-end-line="256" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/pages/ScheduleSelectPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="565">
@@ -1105,12 +1066,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/TestWD.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/util/DriverSingleton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="60" column="108" lean-forward="false" selection-start-line="60" selection-start-column="108" selection-end-line="60" selection-end-column="108" />
+        <state relative-caret-position="551">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1377#1378#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/steps/Steps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1118,9 +1092,21 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/pages/MainPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
-          <caret line="121" column="0" lean-forward="true" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/TestWD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="136" column="20" lean-forward="false" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6066#6067#0" expanded="true" />
+            <element signature="e#6101#6102#0" expanded="true" />
           </folding>
         </state>
       </provider>
