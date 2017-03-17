@@ -12,7 +12,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 
-public class SeatAndLuggagePage extends AbstractPage {
+public class SeatAndLuggagePage extends AbstractPage
+{
 
     private final static String BASE_URL = "http://www.vueling.com/en";
     private final static int NUMBER_0 = 0;
@@ -53,16 +54,19 @@ public class SeatAndLuggagePage extends AbstractPage {
     private WebElement priceForLuggage;
 
 
-    public SeatAndLuggagePage(WebDriver driver) {
+    public SeatAndLuggagePage(WebDriver driver)
+    {
         super(driver);
         PageFactory.initElements(this.driver, this);
     }
 
-    public void openPage() {
+    public void openPage()
+    {
         driver.navigate().to(BASE_URL);
     }
 
-    public void addLuggageToTicket() {
+    public void addLuggageToTicket()
+    {
         WebDriverWait wait = new WebDriverWait(driver, 20);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"paySeats\"]/div[5]/div/a/span")));
         addLuggageButton.click();
@@ -70,30 +74,36 @@ public class SeatAndLuggagePage extends AbstractPage {
         dropDownListLuggageSelect.selectByValue("BAG1");
     }
 
-    public void addSeatToTicket() {
+    public void addSeatToTicket()
+    {
         chooseSeat.click();
         super.clickOnButton(chooseConcreteSeatTo);
         List<WebElement> elements = driver.findElements(By.xpath(".//*[@id='seat_0_3B']"));
         elements.get(1).click();
     }
 
-    public boolean isLuggageInsurance() {
+    public boolean isLuggageInsurance()
+    {
         return luggageInsuranceBlock.isDisplayed();
     }
 
-    public double getTotalPriceForSeats() {
+    public double getTotalPriceForSeats()
+    {
         return super.convertPrice(NUMBER_0, totalPriceForSeats);
     }
 
-    public double getPriceForSeatsFromTable() {
+    public double getPriceForSeatsFromTable()
+    {
         return super.convertPrice(NUMBER_4, priceForSeatsFromTable);
     }
 
-    public double getPriceForLuggage() {
+    public double getPriceForLuggage()
+    {
         return super.convertPrice(NUMBER_0, priceForLuggage);
     }
 
-    public double getPriceForLuggageFromTable() {
+    public double getPriceForLuggageFromTable()
+    {
         return super.convertPrice(NUMBER_12, priceForLuggage);
     }
 

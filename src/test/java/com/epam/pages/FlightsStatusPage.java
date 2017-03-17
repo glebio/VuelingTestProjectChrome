@@ -11,7 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 
-public class FlightsStatusPage extends AbstractPage {
+public class FlightsStatusPage extends AbstractPage
+{
 
     private final static String BASE_URL = "http://www.vueling.com/en/vueling-services/flight-information/flights-status";
     private final static String PATH_TO_BUTTON_NEXT_IN_CALENDER = ".//*[@id='datePickerContainer']//a[@data-handler = 'next']";
@@ -75,23 +76,27 @@ public class FlightsStatusPage extends AbstractPage {
     @FindBy(xpath = "//div[@class = 'wrap-table-estado-vuelos fullWidth']/div[@class='intxt']")
     private WebElement flightsTableHeading;
 
-    public FlightsStatusPage(WebDriver driver) {
+    public FlightsStatusPage(WebDriver driver)
+    {
         super(driver);
         PageFactory.initElements(this.driver, this);
     }
 
-    public void openPage() {
+    public void openPage()
+    {
         driver.navigate().to(BASE_URL);
     }
 
-    public FlightsStatusPage flightsStatusForDestinations(String from, String to, String date) {
+    public FlightsStatusPage flightsStatusForDestinations(String from, String to, String date)
+    {
         chooseCityForFlight(from, to);
         chooseDateOfFlight(date);
         clickButtonSearchFlight();
         return this;
     }
 
-    private void chooseCityForFlight(String from, String to) {
+    private void chooseCityForFlight(String from, String to)
+    {
         WebDriverWait wait = new WebDriverWait(driver, 50);
         fieldFromFlight.sendKeys(from);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(PATH_TO_STATION_LIST)));
@@ -104,19 +109,25 @@ public class FlightsStatusPage extends AbstractPage {
         fieldDateOfFlights.click();
     }
 
-    private void clickButtonSearchFlight() {
+    private void clickButtonSearchFlight()
+    {
         super.clickOnButton(searchForFlights);
     }
 
-    public boolean severalFlightsTableDisplayed() {
+    public boolean severalFlightsTableDisplayed()
+    {
         return driver.findElements(By.xpath(severalFlightTablePath)).size() != 0;
     }
 
-    public boolean correctMultipleFlightsInfoDisplayed(String from, String to, String date) {
-        if (severalFlightsTableDisplayed()) {
-            for (WebElement element : flightRawsList) {
+    public boolean correctMultipleFlightsInfoDisplayed(String from, String to, String date)
+    {
+        if (severalFlightsTableDisplayed())
+        {
+            for (WebElement element : flightRawsList)
+            {
                 if (!element.findElement(By.xpath("td[2]")).getText().equals(from)
-                        || !element.findElement(By.xpath("td[3]")).getText().equals(to)) {
+                        || !element.findElement(By.xpath("td[3]")).getText().equals(to))
+                {
                     return false;
                 }
             }
@@ -128,7 +139,8 @@ public class FlightsStatusPage extends AbstractPage {
         return false;
     }
 
-    public FlightsStatusPage flightsStatusForFlightNumber(String flightNumber, String dateOfFlight) {
+    public FlightsStatusPage flightsStatusForFlightNumber(String flightNumber, String dateOfFlight)
+    {
         buttonFlightNumber.click();
         fieldFlightNumber.sendKeys(flightNumber);
         fieldDateOfFlights.click();
@@ -137,27 +149,33 @@ public class FlightsStatusPage extends AbstractPage {
         return this;
     }
 
-    private void chooseDateOfFlight(String dateOfFlight) {
+    private void chooseDateOfFlight(String dateOfFlight)
+    {
         String[] splitDate = dateOfFlight.split("/");
-        while (!monthInCalender.getText().equals(splitDate[1])) {
+        while (!monthInCalender.getText().equals(splitDate[1]))
+        {
             driver.findElement(By.xpath(PATH_TO_BUTTON_NEXT_IN_CALENDER)).click();
         }
         driver.findElement(By.xpath("//*[@id='datePickerContainer']//div[contains(@class, 'ui-datepicker-group-first')]//a[text() ='" + splitDate[0] + "']")).click();
     }
 
-    public String takeStatusFlight() {
+    public String takeStatusFlight()
+    {
         return flightStatus.getText();
     }
 
-    public String takeFlightDate() {
+    public String takeFlightDate()
+    {
         return dateOnCheckFlightBox.getText();
     }
 
-    public String takeCityDeparture() {
+    public String takeCityDeparture()
+    {
         return checkCityDeparture.getText();
     }
 
-    public String takeCityArrival() {
+    public String takeCityArrival()
+    {
         return checkCityArrival.getText();
     }
 

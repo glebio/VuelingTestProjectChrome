@@ -1,0 +1,19 @@
+<suite name="Test-Suite">
+    <test name="Vueling Web Site Test">
+        <classes>
+            <class name="com.epam.TestFlightStatusByFlightNumber"/>
+            <class name="com.epam.TestFlightStatusByDestinations"/>
+            <class name="com.epam.TestFlightStatusByDestinationsMultipleResult"/>
+            <class name="com.epam.TestPassengerInfoInput"/>
+            <class name="com.epam.TestPriceFor2PassengersOneWay"/>
+            <class name="com.epam.TestPriceFor2PassengersWithReturn"/>
+            <class name="com.epam.TestSeatAddition"/>
+            <class name="com.epam.TestLuggageAddition"/>
+            <class name="com.epam.TestSearchAirport"/>
+            <class name="com.epam.TestSearchFlight"/>
+            <class name="com.epam.TestSearchHotel"/>
+            <class name="com.epam.TestCarSearch"/>
+            <class name="com.epam.TestLogIn"/>
+        </classes>
+    </test>
+</suite>

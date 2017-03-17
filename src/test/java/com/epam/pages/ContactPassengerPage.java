@@ -10,7 +10,8 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.concurrent.TimeUnit;
 
 
-public class ContactPassengerPage extends AbstractPage {
+public class ContactPassengerPage extends AbstractPage
+{
 
     private final String BASE_URL = "http://www.vueling.com/en";
     @FindBy(xpath = "//label[@for='ControlGroupMainContact_PassengerInputViewContactView_DropDownListTitle_0MR']")
@@ -46,20 +47,24 @@ public class ContactPassengerPage extends AbstractPage {
     @FindBy(xpath = "//*[@id='ControlGroupMainContact_PassengerInputViewContactView_DropDownListTitle_0Div']/div/div[contains(@class, 'check--OK')]")
     private WebElement checkOkGender;
 
-    public ContactPassengerPage(WebDriver driver) {
+    public ContactPassengerPage(WebDriver driver)
+    {
         super(driver);
         PageFactory.initElements(this.driver, this);
     }
 
-    public void openPage() {
+    public void openPage()
+    {
         driver.navigate().to(BASE_URL);
     }
 
-    public boolean isPageOpened() {
+    public boolean isPageOpened()
+    {
         return driver.getCurrentUrl().contains(BASE_URL);
     }
 
-    public void enterAndSubmitPassengerContactInfo(Person person) {
+    public void enterAndSubmitPassengerContactInfo(Person person)
+    {
         Select dropDownListCountrySelect = new Select(dropDownListCountryWE);
         Select dropDownListPhonePrefixSelect = new Select(dropDownListPhonePrefixWE);
         driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
@@ -78,11 +83,14 @@ public class ContactPassengerPage extends AbstractPage {
         mrButton.click();
     }
 
-    public boolean clickSubmit() {
-        if (contactLinkButtonSubmit.isDisplayed()) {
+    public boolean clickSubmit()
+    {
+        if (contactLinkButtonSubmit.isDisplayed())
+        {
             super.clickOnButton(contactLinkButtonSubmit);
             return true;
-        } else {
+        } else
+        {
             return false;
         }
     }
