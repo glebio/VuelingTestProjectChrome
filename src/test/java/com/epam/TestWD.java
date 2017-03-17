@@ -25,14 +25,14 @@ public class TestWD {
     private final static String CITY = "Madrid";
     private final static int FLIGHT_WITH_RETURN = 2;
 
-    @BeforeTest(description = "Init browser")
+    @BeforeClass(description = "Init browser")
     public void setUp() {
         steps = new Steps();
         steps.initBrowser();
     }
 
     @Test
-    public void oneCanLogin() {
+    public void twoCanLogin() {
         steps.loginToVueling(LOGIN, PASSWORD);
         Assert.assertTrue(steps.isLoginToVueling());
     }

@@ -73,7 +73,7 @@ public class SeatAndLuggagePage extends AbstractPage {
     public void addSeatToTicket() {
         chooseSeat.click();
         super.clickOnButton(chooseConcreteSeatTo);
-        List<WebElement> elements = driver.findElements(By.xpath(".//*[@id='seat_0_3B']"));
+        List<WebElement> elements = driver.findElements(By.xpath(".//*[@id='seat_0_3A']"));
         elements.get(1).click();
     }
 
