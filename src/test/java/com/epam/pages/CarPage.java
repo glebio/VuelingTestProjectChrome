@@ -19,13 +19,14 @@ public class CarPage extends AbstractPage
     @FindBy(id = "day-2017412")
     private WebElement dateOfDeparture;
 
-    @FindBy(id = "day-2017426")
+    @FindBy(id = "day-2017414")
     private WebElement dateOfArrival;
 
     @FindBy(id = "searchCarsFormBtn-searchcars")
     private WebElement buttonSearch;
 
-    @FindBy(id = "downtown-vehicle-anchor")
+    @FindBy(xpath = ".//*[@id='ct-container']//div[@class='ct-downtown-view']")
+    //   downtown-vehicle-anchor
     private WebElement mapWithCars;
 
     public CarPage(WebDriver driver)
