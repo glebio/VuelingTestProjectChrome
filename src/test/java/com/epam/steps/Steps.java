@@ -31,7 +31,7 @@ public class Steps
 
     public boolean isLoginToVueling() {
         MainPage vuelingMainPage = new MainPage(driver);
-        return vuelingMainPage.verifyLogin().contains("Здравствуйте") || vuelingMainPage.verifyLogin().contains("Hi");
+        return vuelingMainPage.verifyLogin().contains("Anastasiya")/*|| vuelingMainPage.verifyLogin().contains("Hi")*/;
     }
 
     public void openFlightsStatusPageWithFlightNumberInsertFlightNumberAndChooseDate(String flightNumber, String dateOfFlight)
