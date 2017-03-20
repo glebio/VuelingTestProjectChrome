@@ -81,11 +81,11 @@ public class TestWD {
         Assert.assertEquals(df.format(actualPrice), df.format(steps.takeFinalPrice()));
     }
 
-    @Test
+    /*@Test
     public void canFindAirport() {
         steps.verifyAirport(CITY);
         Assert.assertTrue(steps.isAirportFound());
-    }
+    }*/
 
     @Test
     public void oneCanVerifyAddLuggage() throws InterruptedException {
