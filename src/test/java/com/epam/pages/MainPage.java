@@ -112,22 +112,22 @@ public class MainPage extends AbstractPage {
 
     public void chooseDateFlight(String dateOfFlight) {
 
-        WebDriverWait wait = new WebDriverWait(driver, 50);
+        //WebDriverWait wait = new WebDriverWait(driver, 50);
 
-        List<WebElement> availableDatesList = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("/*//*[@id='datePickerContainer']//div[contains(@class, 'ui-datepicker-group-last')]//a")));
+        /*List<WebElement> availableDatesList = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("/*//*[@id='datePickerContainer']//div[contains(@class, 'ui-datepicker-group-last')]//a")));
         WebElement webElement = availableDatesList.get(availableDatesList.size() - 1);
         wait.until(ExpectedConditions.elementToBeClickable(webElement));
         JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript(PARAM_FOR_JAVA_SCRIPT, webElement);
+        jse.executeScript(PARAM_FOR_JAVA_SCRIPT, webElement);*/
 
 
 
-        /*WebDriverWait wait = new WebDriverWait(driver, 50);
+        WebDriverWait wait = new WebDriverWait(driver, 50);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(PATH_TO_BUTTON_NEXT_IN_CALENDER)));
-        List<WebElement> availableDatesList = driver.findElements(By.xpath("./*//*[@data-handler='selectDay']"));
-        WebElement webElement = availableDatesList.get(availableDatesList.size() - 2);
+        List<WebElement> availableDatesList = driver.findElements(By.xpath(".//*[@data-event='click']"));
+        WebElement webElement = availableDatesList.get(availableDatesList.size() - 1);
         JavascriptExecutor jse2 = (JavascriptExecutor) driver;
-        jse2.executeScript(PARAM_FOR_JAVA_SCRIPT, webElement);*/
+        jse2.executeScript(PARAM_FOR_JAVA_SCRIPT, webElement);
     }
 }
 
