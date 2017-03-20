@@ -30,7 +30,8 @@ public class MainPage extends AbstractPage {
     @FindBy(xpath = "//*[contains(@class, 'header_navBarUser_account_nick')]")
     private WebElement fieldForCheckIsLogin;
 
-    @FindBy(xpath = "//span[text() = 'Return']")
+    @FindBy(xpath = ".//*[@id='radiosBuscador']//label")
+    // //span[text() = 'Return']
     private WebElement buttonReturn;
 
     @FindBy(xpath = ".//input[@id='AvailabilitySearchInputXmlSearchView_OneWay']")
