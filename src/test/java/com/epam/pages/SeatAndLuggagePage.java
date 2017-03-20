@@ -75,7 +75,7 @@ public class SeatAndLuggagePage extends AbstractPage {
         super.clickOnButton(chooseConcreteSeatTo);
         Thread.sleep(1000);
         List<WebElement> elements = driver.findElements(By.xpath(".//*[@id='seat_0_3A']"));
-        elements.get(1).click();
+        elements.get(0).click();
     }
 
     public boolean isLuggageInsurance() {
