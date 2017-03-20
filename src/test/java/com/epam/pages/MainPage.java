@@ -35,7 +35,7 @@ public class MainPage extends AbstractPage {
     // //span[text() = 'Return']
     private WebElement buttonReturn;
 
-    @FindBy(xpath = ".//input[@id='AvailabilitySearchInputXmlSearchView_OneWay']")
+    @FindBy(id = "AvailabilitySearchInputSearchView_OneWay")
     private WebElement buttonOneWayOnly;
 
     @FindBy(id = "AvailabilitySearchInputSearchView_TextBoxMarketOrigin1")
