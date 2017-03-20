@@ -48,7 +48,7 @@ public class FlightsStatusPage extends AbstractPage {
     @FindBy(xpath = "//*[@id='stationsList']/ul/li/a[@class = 'optionActive']")
     private WebElement clickOnNeedCity;
 
-    @FindBy(xpath = "//*[@id='main']//div[contains(@class, 'status_tag')]")
+    @FindBy(xpath = "//div/span[@class='status_tag_text']")
     private WebElement flightStatus;
 
     @FindBy(xpath = "//*[@id='main']//h3[contains(@class, 'header')]/span[contains(@class, 'floatLeft')]")
