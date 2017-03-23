@@ -128,7 +128,6 @@ public class MainPage extends AbstractPage {
        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(PATH_TO_BUTTON_NEXT_IN_CALENDER)));
         List<WebElement> availableDatesList = driver.findElements(By.xpath("//td[@data-handler='selectDay' and not(contains(@class, 'ui-datepicker-unselectable'))]"));
         WebElement webElement = availableDatesList.get(availableDatesList.size() - 1);
-        System.out.println(availableDatesList.size());
         /*JavascriptExecutor jse2 = (JavascriptExecutor) driver;
         jse2.executeScript(PARAM_FOR_JAVA_SCRIPT, webElement);*/
         super.clickOnButton(webElement);
