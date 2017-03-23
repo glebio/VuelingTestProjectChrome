@@ -18,7 +18,7 @@ public class ScheduleSelectPage extends AbstractPage {
     private final static String PATH_TO_TOTAL_PRICEBOX = "//dl[contains(@class,'travelInfo_listHeader')]//span[contains(@class, 'wrapper_currency')]";
     private final static int NUMBER = 0;
 
-    @FindBy(id = "ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare1Label")
+    @FindBy(xpath = "//*[contains(@id,'RadioButtonMkt1Fare1Label')]")
     private WebElement basicOutboundButton;
 
     @FindBy(id = "ControlGroupScheduleSelectView_AvailabilityInputScheduleSelectView_RadioButtonMkt1Fare2Label")
